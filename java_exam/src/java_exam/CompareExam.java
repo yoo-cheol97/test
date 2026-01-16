@@ -1,0 +1,55 @@
+package java_exam;
+
+public class CompareExam {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int age = 10;
+		// age가 10대 인지 확인해본다
+		// 10 <= age < 20
+		
+		// 10대가 맞다면 true를 아니라면 false를 출력한다
+		
+		boolean isTeenager = 10 <= age && 20 > age;
+		System.out.println(isTeenager);
+		
+		// age가 20대 인지 확인해본다
+		// 20 <= age < 30
+		
+		// 20대가 맞다면 true를 아니라면 false를 출력한다
+		
+		// 가게에 방문한 고객의 나이
+		int customerAge = 15;
+		// 고각의 지갑에 들어있는 돈
+		int customerWallet = 3000;
+		
+		// A 가게는 19세 이상의 고객만 방문할 수 있다
+		// A 가게에서 판매하는 모든 제품의 가격은 1500원이다.
+		//고객은 가게에서 제품을 구매할 수 있을까?
+		//구매가능 = true, 아니면 false
+		
+		
+		boolean isMart = 19 <= customerAge && customerWallet >= 1500;
+		System.out.println(isMart);
+		
+		// B가게는 19세 이상의 고객만 방문할 수 있다.
+		// B가게에서 판매하는 모든 제품의 가격은 2000원이다.
+		// B가게는 특별이벤트로 고객의 나이가 3의 배수이면 돈이 모자라더라도 구매할 수 있게 하고 있다.
+		// 고객은 가게에서 제품을 구매할 수 있을까?
+		// 구매할 수 있다면 true, 아니라면 false
+		// 빠른연산을 고려
+		
+		customerAge = 21;
+		customerWallet = 1300;
+		
+		// boolean isBmart = customerAge >= 19 && (customerWallet >= 2000 || customerAge % 3 == 0);
+		
+		boolean isAdult = customerAge <= 19;
+		boolean isBmart = customerWallet >= 2000 || customerAge % 3 == 0;
+		
+		System.out.println(isAdult && isBmart);
+
+	}
+
+}
