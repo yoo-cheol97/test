@@ -1,0 +1,38 @@
+package exam;
+
+public class Q1468 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 0;
+		int y = 0;
+		
+		//x = 12;
+		//y = 5;
+		
+		x = 9;
+		y = -13;
+		
+		
+		if(x > 0) {
+			if(y > 0) {
+				System.out.println("1");
+			}
+			else if(y < 0) {
+				System.out.println("4");
+			}
+		}
+		else if(x < 0) {
+			if(y < 0) {
+				System.out.println("3");
+			}
+			else if(y > 0) {
+				System.out.println("2");
+			}
+		}
+		
+
+	}
+
+}

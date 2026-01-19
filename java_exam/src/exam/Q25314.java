@@ -1,0 +1,37 @@
+package exam;
+
+import java.util.Scanner;
+
+public class Q25314 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		int n = 0;
+		
+		n = keyboard.nextInt();
+		
+		String type ="";
+		
+		while(n >= 4) {
+			
+			type += "long ";
+			n -= 4;
+			
+		}
+		
+		type += "int";
+		System.out.println(type);
+		
+		//String type = "long ";
+		//type = type + "long ";
+		
+		
+		
+		
+
+	}
+
+}

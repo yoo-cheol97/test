@@ -1,0 +1,29 @@
+package exam;
+
+public class Q120829 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int angle = 0;
+		
+		//angle = 70;
+		//angle = 91;
+		angle = 180;
+		
+		if(angle < 90) {
+			System.out.println("1");
+		}
+		else if(angle == 90) {
+			System.out.println("2");
+		}
+		else if(angle < 180 && angle > 90) {
+			System.out.println("3");
+		}
+		else if(angle == 180) {
+			System.out.println("4");
+		}
+
+	}
+
+}

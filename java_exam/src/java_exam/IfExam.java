@@ -4,7 +4,7 @@ public class IfExam {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		/*
 		int randomNumber = (int) (Math.random() * 100);
 		System.out.println(randomNumber);
 		
@@ -46,7 +46,8 @@ public class IfExam {
 		else if (randomNumber >= 60) {
 			System.out.println("60 범위의 숫자입니다.");
 		}
-
+*/
+		
 		
 
 	}
