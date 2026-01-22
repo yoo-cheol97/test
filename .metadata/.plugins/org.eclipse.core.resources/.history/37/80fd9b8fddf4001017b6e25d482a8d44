@@ -1,0 +1,22 @@
+package exam;
+
+public class Q2884 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// m = 10 * 60 + 10
+		// 시간 m / 60;
+		// 분 m % 60
+		// 알람 = 24 * 60
+		
+		
+		int H = 0;
+		int M = 0;
+		
+		if()
+		
+
+	}
+
+}

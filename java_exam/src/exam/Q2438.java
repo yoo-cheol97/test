@@ -29,8 +29,6 @@ public class Q2438 {
 		}
 		
 		
-		
-		
 		/*int n = 2;
 		int o = 1;
 		

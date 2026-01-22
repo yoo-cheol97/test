@@ -1,0 +1,14 @@
+package oop;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+		
+		Car kona = new Car();
+		System.out.println(kona);
+		
+		Car kanibal = new Car();
+		System.out.println(kanibal);
+		
+	}
+}

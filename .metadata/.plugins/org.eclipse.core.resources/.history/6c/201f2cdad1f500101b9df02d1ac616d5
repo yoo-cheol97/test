@@ -1,0 +1,209 @@
+package exam;
+
+
+
+public class Q0120 {
+
+	/*
+	public static int printAdd(int num) {
+		
+		int result = 0;
+		
+		for(int i = 0; i <= num; i++) {
+			result += i;
+		}
+		return result;
+		
+	}
+	
+	public static void main (String[] args) {
+		
+		int printSum = printAdd(10);
+		System.out.println(printSum);
+		
+	}
+	*/
+	
+	// 4 부터 파라미터로 전달된 숫자 중 소수만 출력한다.
+	//   - printPrime(20) => 5, 7, 11, 13, 17, 19
+	
+	/*
+	public static int primeAdd(int num) {
+		int result = 0;
+		int yak = 0;
+		
+		for(int i = 0; i <= num; i++) {
+			
+			if(i % num == 0) {
+				yak++;
+			}
+		}
+		if (yak == 2) {
+			
+		}
+		return ;
+		
+	}
+	
+	public static void main (String[] args) {
+		
+		int printPrime = primeAdd(20);
+		System.out.println(printPrime);
+		
+	}
+	
+	*/
+	
+	
+	 //파라미터로 전달된 숫자 두 개 중 가장 큰 수 하나만 출력한다.
+	 //  - printMax(10, 20) => 20
+	/*
+	public static int printAdd(int num1, int num2) {
+		int result = 0;
+		if(num1 > num2) {
+			result = num1;
+		}
+		else if(num1 < num2) {
+			result = num2;
+		}
+		return result;
+	}
+	
+	public static void main( String[] args ) {
+		
+		int printMax = printAdd(10, 20);
+		System.out.println(printMax);
+		
+	}
+	*/
+	
+	//파라미터로 전달된 나이가 성인인지 미성년인지 구분하여 출력한다.
+	//   - printAge(20) => "성인"
+	//   - printAge(15) => "미성년"
+	/*
+	public static String adult(int age) { // String확인
+		
+		String a = "성인";
+		String b = "미성년";
+		String result;
+		
+		if(age >= 20) {
+			result = a;
+		}
+		else {
+			result = b;
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		String printAge = adult(15);	// String 확인
+		System.out.println(printAge);
+
+	}*/
+	/*
+	랜덤한 숫자를 생성하고 아래 규칙에 따른 결과를 반환한다.   
+	- 3의 배수이면 "Fizz"    
+	- 5의 배수이면 "Buzz"    
+	- 3과 5의 공배수이면 "FizzBuzz"    
+	- 그 외의 숫자이면 숫자 자체를 문자로 변경하여 반환한다.    
+	- getFizzBuzz(9) => "Fizz"    
+	- getFizzBuzz(10) => "Buzz"    
+	- getFizzBuzz(15) => "FizzBuzz"    
+	- getFizzBuzz(7) => "7"
+	*/
+	/*
+	public static String ratio(int num) {
+		String b = "Fizz";
+		String c = "Buzz";
+		String a = "FizzBuzz";
+		String d = num+""; // int를 String한테 공백을 더해주면 들어간다
+		String result;
+		
+		int randomNumber = 0;
+		
+		if(num % 3 == 0 && num % 5 == 0) {
+			result = a;
+		}
+		else if(num % 3 == 0) {
+			result = b;
+		}
+		else if(num % 5 == 0) {
+			result = c;
+		}
+		else {
+			result = d;
+			//return d;
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		
+		String getFizzBuzz = ratio(15);
+		System.out.println(getFizzBuzz);
+		
+	}
+	*/
+	/*
+	서로 다른 숫자 7개를 배열에 할당하여 반환한다.
+	- getUniqueNumbers() => [3, 7, 11, 23, 29, 35, 42] (숫자는 예시일 뿐이며, 실행할 때마다 달라짐)
+	- 단, 배열에 할당된 숫자는 중복되지 않아야 한다.
+	*/
+	/*
+	public static int getUniqueNumbers(int num) {
+	
+		
+	
+	
+	}
+	
+	public static void main( String[] args ) {
+		
+		
+		
+	}
+	*/
+	/*
+	7. 정수 파라미터 두 개를 전달받아 곱한 결과가 짝수인지 홀수인지 반환한다.
+	- getEvenOdd(4, 5) => "짝수"
+	- getEvenOdd(3, 5) => "홀수"
+	 */
+	
+	public static String getEvenOdd(int num1, int num2) {
+		String result;
+		
+		if((num1 * num2) % 2 == 0 ) {
+			result = "짝수";
+		}
+		else {
+			result = "홀수";
+		}
+		return result;
+			
+	}
+	
+	public static void main( String[] args ) {
+		
+		String evenOdd = getEvenOdd(4,5);
+		System.out.println(evenOdd);
+		
+	}
+	
+	
+	/*
+	public static int computeAdd(int number1, int number2) {
+		int computeResult = number1 + number2;
+		return computeResult;
+	}
+	public static void main( String[] args ) {
+		
+		int resultAdd = computeAdd(19, 21);
+		System.out.println(resultAdd);
+		
+	}
+	*/
+	
+	
+	
+}

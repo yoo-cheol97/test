@@ -1,6 +1,15 @@
 package exam;
 
 public class Q134 {
+	
+	public static int getFlightFare(int age) {
+		if(age >= 19) {
+			return 300_000;
+		}
+		else {
+			return 100_000;
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,6 +23,12 @@ public class Q134 {
 		int adultOneWayFlightFare = 300_000;
 		int kidOneWayFlightFare = 120_000;
 		
+		int flightFare = 0;
+		flightFare += getFlightFare(father);
+		flightFare += getFlightFare(mother);
+		flightFare += getFlightFare(daughter);
+		
+		/*
 		// Case1. 비행 요금을 계산
 		int flightFare = 0;
 		
@@ -61,7 +76,7 @@ public class Q134 {
 		else {
 			System.out.println("여행 가자");
 		}
-
+*/
 	}
 
 }

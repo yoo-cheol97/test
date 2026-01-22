@@ -1,0 +1,28 @@
+package exam;
+
+public class Q162 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		int j = 0;
+		for(int i = 1; i < 101; i++) {
+			j += i;
+			
+		}
+		System.out.println(j);
+		*/
+		
+		int j = 0;
+		
+		for(int i = 1; i < 101; i+=2) {
+			j += i;
+		}
+		System.out.println(j);
+		
+		
+		
+		
+	}
+
+}

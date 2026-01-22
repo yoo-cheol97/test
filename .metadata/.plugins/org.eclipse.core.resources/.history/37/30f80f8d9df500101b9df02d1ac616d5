@@ -1,0 +1,48 @@
+package java_exam;
+
+public class ArrayExam {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] scoreArray = new int[7];
+		
+		scoreArray[0] = 18;
+		scoreArray[1] = 22;
+		scoreArray[2] = 33;
+		scoreArray[3] = 44;
+		scoreArray[4] = 555;
+		scoreArray[5] = 66;
+		scoreArray[6] = 777;
+		
+		/*
+		System.out.println(scoreArray[0]);
+		System.out.println(scoreArray[1]);
+		System.out.println(scoreArray[2]);
+		System.out.println(scoreArray[3]);
+		System.out.println(scoreArray[4]);
+		System.out.println(scoreArray[5]);
+		System.out.println(scoreArray[6]);
+		*/
+		
+		for(int i = 0; i < 7; i++) {
+			System.out.println(scoreArray[i]);
+		}
+		
+		//배열 + for + while
+		
+		
+		
+		System.out.println(scoreArray);		
+		
+		
+		int score = 60;
+		System.out.println(score);
+		
+		
+		
+		//int scoreArray2[] = new int[7];
+
+	}
+
+}

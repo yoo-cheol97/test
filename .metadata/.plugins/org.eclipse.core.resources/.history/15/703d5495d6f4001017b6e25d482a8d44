@@ -1,0 +1,24 @@
+package exam;
+
+public class Q134 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int money = 1_000_000;
+		
+		int father = 40;
+		int mother = 36;
+		int daughter = 11;
+		
+		int adultOneWayFlightFare = 300_000;
+		int kidOneWayFlightFare = 120_000;
+		
+		if (father >= 19) {
+			
+		}
+		
+
+	}
+
+}
