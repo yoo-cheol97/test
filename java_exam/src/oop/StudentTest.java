@@ -4,12 +4,14 @@ public class StudentTest {
 
 	public static void main(String[] args) {
 		
-		Student student = new Student();
+		Student student = new Student(80, 85, 85, 75);
 		
+		/*
 		student.java = 80;
 		student.python = 95;
 		student.cpp = 85;
 		student.csharp = 75;
+		*/
 		
 		int sum = student.getSumAllScores();
 		double average = student.getAverage();
