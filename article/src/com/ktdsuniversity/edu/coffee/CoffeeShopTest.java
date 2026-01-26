@@ -1,4 +1,4 @@
-package oop;
+package com.ktdsuniversity.edu.coffee;
 
 public class CoffeeShopTest {
 	
@@ -9,16 +9,17 @@ public class CoffeeShopTest {
 		//Coffee tea = new Coffee("캐모마일", 5000);
 		
 		//CoffeeShop starbucks = new CoffeeShop(hotCoffee, iceCoffee);
-		// 위 아래 두 가지 다 가능 위 코드는 위에 2줄을 판매하는 코드 
-		//아래는 coffeeshop에 기본 아메리카노 아이스 아메리카노를 판매하는 코드
-		CoffeeShop starbucks = new CoffeeShop(); 
 		
-		//CoffeeShopArray starbucks = new CoffeeShopArray(hotCoffee, iceCoffee, tea);
 		
-		int price = starbucks.orderCoffee();
+		
+		
+		/*
+		CoffeeShop starbucks = new CoffeeShop(hotCoffee, iceCoffee);
+		
+		int price = starbucks.orderCoffee(1, 3);
 		System.out.println(price+ "원");
 		
-		price = starbucks.orderCoffee(2);
+		price = starbucks.orderCoffee(2, 6);
 		System.out.println(price+ "원");
 		
 		price = starbucks.orderCoffee(3, 5);
@@ -26,7 +27,7 @@ public class CoffeeShopTest {
 		
 		price = starbucks.orderCoffee(0, 10);
 		System.out.println(price+ "원");
-		
+		*/
 	}
 
 }

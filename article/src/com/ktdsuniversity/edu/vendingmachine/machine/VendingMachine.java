@@ -1,10 +1,17 @@
-package oop;
+package com.ktdsuniversity.edu.vendingmachine.machine;
 
 import com.ktdsuniversity.edu.vendingmachine.item.SoftDrinks;
 
 public class VendingMachine {
 	
-	SoftDrinks[] drinks;
+	private SoftDrinks[] drinks;
+	int cost;
+	int stock;
+	
+	public VendingMachine(int cost, int stock) {
+		this.cost = cost;
+		this.stock = stock;
+	}
 	
 	public VendingMachine(SoftDrinks 박카스, SoftDrinks 몬스터, SoftDrinks 핫식스, SoftDrinks 밀키스 ) {
 		this.drinks = new SoftDrinks[4];
@@ -14,9 +21,13 @@ public class VendingMachine {
 		this.drinks[3] = 밀키스;
 	}
 	
-	int cost;
-	int stock;
+	public int getCost() {
+		return this.cost;
+	}
 	
+	public int getStock() {
+		return this.stock;
+	}
 	
 	public int orderDrinks(int menu, int menuCount) {
 		/*int sumCost;
@@ -36,17 +47,21 @@ public class VendingMachine {
 		
 		SoftDrinks pressedDrink = this.drinks[menu];
 		
-		if(pressedDrink.stock == 0) {
+		if(pressedDrink.getStock() == 0) {
 			System.out.println("품절 되었습니다");
 			return 0;
 		}
-		else if(pressedDrink.stock < menuCount) {
-			menuCount = pressedDrink.stock;
+		else if(pressedDrink.getStock() < menuCount) {
+			menuCount = pressedDrink.getStock();
 			//pressedDrink.stock = 0;
 		}
 		
-		pressedDrink.stock -= menuCount;
-		return pressedDrink.price * menuCount;
+		int stock = pressedDrink.getStock();
+		stock -= menuCount;
+		pressedDrink.setStock(stock);
+		
+		//pressedDrink.stock -= menuCount; // 위 3줄이 해당 코드
+		return pressedDrink.getPrice() * menuCount;
 	}
 	
 	public void getDrinks(int menu, int getMenuCount) {
@@ -61,14 +76,19 @@ public class VendingMachine {
 			return;
 		}
 		SoftDrinks pressedDrink = this.drinks[menu];
-		pressedDrink.stock += getMenuCount;
+		
+		int stock = pressedDrink.getStock();
+		stock += getMenuCount;
+		pressedDrink.setStock(stock);
+		
+		//pressedDrink.stock += getMenuCount; 위 3줄
 		
 	}
 	
 	public void printAllDrinkInfo() {
 		
 		for(int i = 0; i < this.drinks.length; i++) {
-			System.out.println(this.drinks[i].name + "" + this.drinks[i].stock + "개 남았습니다" );
+			System.out.println(this.drinks[i].getName() + "" + this.drinks[i].getStock() + "개 남았습니다" );
 		}
 		/*
 		System.out.println(this.drinks[0].name + "" + this.drinks[0].stock + "개 남았습니다" );

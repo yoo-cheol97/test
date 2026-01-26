@@ -1,5 +1,11 @@
 package oop;
 
+//줄선택 shift + home
+//줄삭제 ctrl d
+//라인이동 alt 위아래
+//라인복사 alt ctrl 위 아래
+//멀티커서 alt shift a
+
 /**
  * <pre>
  * 객체 지향 프로그래밍의 첫 번째 실습
