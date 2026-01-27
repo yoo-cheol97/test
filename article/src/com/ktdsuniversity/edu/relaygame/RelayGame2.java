@@ -18,7 +18,6 @@ public class RelayGame2 {
 		this.startWord = this.keyboard.nextLine();
 		
 		String lastLetter = "";
-		boolean firstLetter;
 		
 		while(true) {
 			System.out.println("다음 단어를 입력해주세요");
