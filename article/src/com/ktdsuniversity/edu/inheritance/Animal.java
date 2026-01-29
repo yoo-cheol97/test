@@ -77,6 +77,14 @@ public class Animal {
 			
 			return super.equals(obj);
 		}
+
+		@Override
+		public String toString() {
+			return "Animal [name=" + name + ", voice=" + voice + ", speed=" + speed + ", damage=" + damage
+					+ ", hitPoint=" + hitPoint + "]";
+		}
+		
+		
 		
 	
 }

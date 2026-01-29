@@ -5,7 +5,7 @@ public class BatMobile extends SportsCar {
 	private boolean isDetachBatPod;
 
 	public BatMobile(String modelName) {
-		super(modelName);
+		super(modelName, "부아아아아아앙");
 	}
 
 	public void detachBatPod() {
@@ -20,4 +20,4 @@ public class BatMobile extends SportsCar {
 			}
 		}
 	}
-}
+}		
