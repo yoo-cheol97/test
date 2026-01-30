@@ -19,7 +19,7 @@ public class ConvenienceStore extends AbstractMart {
 	
 	@Override
 	public void givePoint(Guest guest, int amount) {
-		int point = (int) (amount * 0.01);
+		int point = (int) (amount * 0.001);
 		guest.addPoint(point);
 		
 	}

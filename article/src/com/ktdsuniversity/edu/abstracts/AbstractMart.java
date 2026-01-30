@@ -20,14 +20,13 @@ public abstract class AbstractMart {
 		this.remainMoney = money;
 		
 		int guestPoint = this.usePoint(guest);
-		
 		// 판매가격
 		int amount = sellCount * this.productPrice;
 		// 할인
 		amount -= this.discount(guest, amount);
 		
 		if(money + guestPoint < amount) {
-			System.out.println("돈이 모자랍니다. 구매 가격: " + amount + "손님이 낸 돈: " + money);
+			System.out.println("돈이 모자랍니다. 구매 가격: " + amount + "원," + " 손님이 낸 돈: " + money + "원");
 			return;
 		}
 		
@@ -44,9 +43,10 @@ public abstract class AbstractMart {
 		
 		//this.remainMoney -= amount - guestPoint;
 		this.safe += money - this.remainMoney;
-		System.out.println("매출액: " + this.safe + "원");
+		System.out.println("총 액: " + this.safe + "원");
 		System.out.println("거슬러 줄 돈: " + this.remainMoney + "원");
-		
+		this.safe = 0; // 추가
+	
 		// 마트가 손님에게 거슬러 준다
 		guest.giveMoney(this.remainMoney); 
 		this.remainMoney = 0;
