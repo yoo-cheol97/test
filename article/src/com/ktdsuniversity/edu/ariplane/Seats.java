@@ -15,8 +15,8 @@ public class Seats {
 			
 			for(AirplaneName airplaneName : airplane) {
 				System.out.println(i);
-				System.out.println(airplaneName);
-			}
+				//System.out.println(airplaneName);
+			}// for문으로
 	
 			
 		}
