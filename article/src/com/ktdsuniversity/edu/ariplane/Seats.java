@@ -12,10 +12,13 @@ public class Seats {
 		List<AirplaneName> airplane = seat.get(i);
 		
 		if(airplane != null) {
+			
 			for(AirplaneName airplaneName : airplane) {
 				System.out.println(i);
 				System.out.println(airplaneName);
 			}
+	
+			
 		}
 		
 	}
@@ -38,6 +41,14 @@ public class Seats {
 		airplane.add(new AirplaneName(9, "O"));
 		
 		printAirplaneName(seat, 1);
+		printAirplaneName(seat, 2);
+		printAirplaneName(seat, 3);
+		printAirplaneName(seat, 4);
+		printAirplaneName(seat, 5);
+		printAirplaneName(seat, 6);
+		printAirplaneName(seat, 7);
+		printAirplaneName(seat, 8);
+		printAirplaneName(seat, 9);
 			
 	}
 

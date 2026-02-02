@@ -14,7 +14,7 @@ public class AirplaneName {
 
 	@Override
 	public String toString() {
-		return "AirplaneName = " + this.number + "편의 좌석 현황입니다" ;
+		return "AirplaneName = " + this.number + " : " + this.seatO ;
 	}
 	
 	
