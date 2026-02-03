@@ -1,35 +1,30 @@
 package com.ktdsuniversity.edu.ariplane;
 
-import java.util.Scanner;
-
 public class AirplaneName {
 	
 	private int number;
-	private String seatO;
+	private String seatOx;
 	
-	public AirplaneName(int number, String seatO) {
+	public AirplaneName(int number, String seatOx) {
 		this.number = number;
-		this.seatO = seatO;
+		this.seatOx = seatOx;
+	}
+	
+	public int getNumber() {
+		return number;
+	}
+
+	public String getSeatOx() {
+		return seatOx;
+	}
+
+	public void setSeatOx(String seatOx) {
+		this.seatOx = seatOx;
 	}
 
 	@Override
 	public String toString() {
-		return "AirplaneName = " + this.number + " : " + this.seatO ;
+		return this.number + ": " + this.seatOx + "   " ;
 	}
 	
-	
-	
-	/*
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String input = scanner.next();
-		System.out.println("비행기 편의 이름을 입력하세요: ");
-
-		if (input.equals("0001")) {
-			String planeName = scanner.nextLine();
-			System.out.println("0001편은 존재하지 않습니다.");
-			System.out.println("다른 비행기 편의 이름을 입력하세요: ");
-		}
-	}*/
-
 }
