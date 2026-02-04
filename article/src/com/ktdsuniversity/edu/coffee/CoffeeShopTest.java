@@ -10,12 +10,9 @@ public class CoffeeShopTest {
 		
 		//CoffeeShop starbucks = new CoffeeShop(hotCoffee, iceCoffee);
 		
-		
-		
-		
+		//CoffeeShop starbucks = new CoffeeShop(hotCoffee, iceCoffee);
+		CoffeeShop starbucks = new CoffeeShop();
 		/*
-		CoffeeShop starbucks = new CoffeeShop(hotCoffee, iceCoffee);
-		
 		int price = starbucks.orderCoffee(1, 3);
 		System.out.println(price+ "원");
 		
@@ -26,8 +23,20 @@ public class CoffeeShopTest {
 		System.out.println(price+ "원");
 		
 		price = starbucks.orderCoffee(0, 10);
-		System.out.println(price+ "원");
-		*/
+		System.out.println(price+ "원");*/
+		
+		int price = starbucks.orderCoffee();
+		System.out.println(price);
+		
+		price = starbucks.orderCoffee(Menu.HOT);
+		System.out.println(price);
+		
+		price = starbucks.orderCoffee(Menu.ICE, 5);
+		System.out.println(price);
+		
+		price = starbucks.orderCoffee(Menu.HOT, 10);
+		System.out.println(price);
+		
 	}
 
 }

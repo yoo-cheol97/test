@@ -12,6 +12,10 @@ public class CoffeeShop {
 	 */
 	private Coffee ice;
 	
+	public CoffeeShop() {
+		this(new Coffee("기본 아메리카노", 1500, 30), new Coffee("아이스 아메리카노", 1500, 50));
+	}
+
 	public CoffeeShop(Coffee hot, Coffee ice) {
 		this.hot = hot;
 		this.ice = ice;
@@ -34,6 +38,20 @@ public class CoffeeShop {
 		this.ice = ice;
 	}
 	
+	public int orderCoffee() {
+		int price = this.orderCoffee( Menu.HOT );
+		return price;
+	}
+
+	/**
+	 * 메뉴 한 개만 주문한다.
+	 */
+	public int orderCoffee(Menu menu) {
+		int price = this.orderCoffee(menu, 1);
+		return price;
+	}
+	
+	
 	/**
 	 * 커피숍에서 커피를 판매한다
 	 * @param menu 메뉴들의 번호 1: hot, 2: ice
@@ -43,12 +61,12 @@ public class CoffeeShop {
 	
 
 	
-	public int orderCoffee(int menu, int quantity) {
+	public int orderCoffee(Menu menu, int quantity) {
 		
 		
-		if(menu == 1) {
+		if(menu == Menu.HOT) {
 			
-			if(this.hot.getStock()>=quantity) {
+			if(this.hot.getStock() >= quantity) {
 			System.out.println(this.hot.getName() + "음료를 " + quantity + "개 주문 받았습니다");
 			
 			int stock = this.hot.getStock();
@@ -61,8 +79,8 @@ public class CoffeeShop {
 				return 0;
 			}
 		}
-		else if(menu == 2) {
-			if(this.ice.getStock()>=quantity) {
+		else if(menu == Menu.ICE) {
+			if(this.ice.getStock() >= quantity) {
 			System.out.println(this.ice.getName() + "음료를 " + quantity + "개 주문 받았습니다");
 			
 			int stock = this.ice.getStock();
@@ -76,5 +94,6 @@ public class CoffeeShop {
 			return 0;
 		}
 	}
+		return quantity;
 	}
 }
