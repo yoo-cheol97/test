@@ -53,7 +53,6 @@ private List<Contact> contactList;
 		parkPhones.add(new Phone(Phone.Type.PERSONAL, "010-3333-3333"));
 		parkPhones.add(new Phone(Phone.Type.HOME, "02-333-3333"));
 		parkPhones.add(new Phone(Phone.Type.COMPANY, "02-523-7029"));
-		cm.add(kim);
 		
 		Contact park = new Contact("박효신", "park@abc.com", parkPhones, new Company("KTDS", "과장", "서울 서초구"));
 		cm.add(park);

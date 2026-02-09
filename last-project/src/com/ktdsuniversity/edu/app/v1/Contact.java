@@ -1,7 +1,9 @@
 package com.ktdsuniversity.edu.app.v1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Contact {
 	
@@ -118,20 +120,28 @@ public class Contact {
 	public String toString() {
 		
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("이름: ").append(name).append(", 이메일: ").append(email);
+		buffer.append("이름: ").append(name);
 		
-		if(company != null) {
-			buffer.append(", 회사: ").append(company.getCompanyName());
-		}
-		if (!phones.isEmpty()) {
-			buffer.append(", 전화번호: ");
+		Map<Phone.Type, String> phoneMap = new HashMap<>();
+		if (phones != null) {
 			for (Phone p : phones) {
-				buffer.append(p.getPhoneNumber()).append("");
+				phoneMap.put(p.getPhoneType(), p.getPhoneNumber());
 			}
 		}
-		
+		buffer.append(", 개인 전화번호: ").append(phoneMap.getNumber(Phone.Type.PERSONAL, ""));
+		buffer.append(", 집 전화번호: ").append(phoneMap.getNumber(Phone.Type.HOME, ""));
+		buffer.append(", 회사 전화번호: ").append(phoneMap.getNumber(Phone.Type.COMPANY, ""));
+
+		buffer.append(", 이메일: ").append(email);
+
+		if (company != null) {
+			buffer.append(", 회사: ").append(company.getCompanyName());
+			buffer.append(", 직급: ").append(company.getJob());
+		}
+
 		return buffer.toString();
 	}
+
 
 	public void setMemo(String memo) {
 		this.memo = memo;
