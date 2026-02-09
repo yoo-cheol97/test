@@ -118,12 +118,12 @@ public class Contact {
 	public String toString() {
 		
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("이름: ").append(name).append(",이메일: ").append(email);
+		buffer.append("이름: ").append(name).append(", 이메일: ").append(email);
 		
 		if(company != null) {
 			buffer.append(", 회사: ").append(company.getCompanyName());
 		}
-		else if (!phones.isEmpty()) {
+		if (!phones.isEmpty()) {
 			buffer.append(", 전화번호: ");
 			for (Phone p : phones) {
 				buffer.append(p.getPhoneNumber()).append("");
