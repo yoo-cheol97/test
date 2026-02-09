@@ -25,6 +25,5 @@ public class Friend {
 		return "이름: " + this.name + ", 생일: " + this.bitrhdate;
 	}
 	
-	
-	
 }
+

@@ -115,7 +115,11 @@ public class Contact {
 	public String getMemo() {
 		return this.memo;
 	}
-
+	
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
+	
 	@Override
 	public String toString() {
 		
@@ -128,24 +132,33 @@ public class Contact {
 				phoneMap.put(p.getPhoneType(), p.getPhoneNumber());
 			}
 		}
-		buffer.append(", 개인 전화번호: ").append(phoneMap.getNumber(Phone.Type.PERSONAL, ""));
-		buffer.append(", 집 전화번호: ").append(phoneMap.getNumber(Phone.Type.HOME, ""));
-		buffer.append(", 회사 전화번호: ").append(phoneMap.getNumber(Phone.Type.COMPANY, ""));
-
+		
+		String personalPhone = phoneMap.get(Phone.Type.PERSONAL);
+		if (personalPhone == null) {
+			personalPhone = "";
+		}
+		
+		String homePhone = phoneMap.get(Phone.Type.HOME);
+		if (homePhone == null) {
+			homePhone = "";
+		}
+		
+		String companyPhone = phoneMap.get(Phone.Type.COMPANY);
+		if (companyPhone == null) {
+			companyPhone = "";
+		}
+		
+		buffer.append(", 개인 번호: ").append(personalPhone);
+		buffer.append(", 집 번호: ").append(homePhone);
+		buffer.append(", 회사 번호: ").append(companyPhone);
 		buffer.append(", 이메일: ").append(email);
-
+		
 		if (company != null) {
 			buffer.append(", 회사: ").append(company.getCompanyName());
 			buffer.append(", 직급: ").append(company.getJob());
+			buffer.append(", 주소: ").append(company.getAddress());
 		}
 
 		return buffer.toString();
 	}
-
-
-	public void setMemo(String memo) {
-		this.memo = memo;
-	}
-
-	
 }
