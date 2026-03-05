@@ -6,7 +6,7 @@ public class ReplyVO {
 	private String boardId;
 	private String topId;
 	private String content;
-	private String writDate;
+	private String writeDate;
 	
 	public String getId() {
 		return this.id;
@@ -32,18 +32,19 @@ public class ReplyVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getWritDate() {
-		return this.writDate;
+	public String getWriteDate() {
+		return this.writeDate;
 	}
-	public void setWritDate(String writDate) {
-		this.writDate = writDate;
+	public void setWriteDate(String writeDate) {
+		this.writeDate = writeDate;
 	}
 	
 	@Override
 	public String toString() {
 		return "ReplyVO [id=" + id + ", boardId=" + boardId + ", topId=" + topId + ", content=" + content
-				+ ", writDate=" + writDate + "]";
+				+ ", writDate=" + writeDate + "]";
 	}
+	
 	
 	
 	
